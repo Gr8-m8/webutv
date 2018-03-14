@@ -1,5 +1,35 @@
 ﻿body {
-  /* Uncomment this to enable scrolling and zooming
-  touch-action: manipulation;
-  */
+    background-color: rgba(100,0,100,1);
+}
+
+.navbar {
+    background-color: rgba(255, 0, 0, 0.9);
+}
+
+.main {
+    margin-top: 100px;
+    border-radius: 20px; 
+}
+
+.about {
+    background-color: rgba(255, 0, 0, 0.9);
+    margin-top:100px;
+}
+
+
+.main-offset-top{
+    margin-top:100px;
+}
+
+.main-offset-left{
+
+}
+
+.main-color-info {
+    background-color: rgba(255, 0, 0, 0.9);
+}
+
+.main-color-context {
+    background-color: lightgray;
+    color:black;
 }
