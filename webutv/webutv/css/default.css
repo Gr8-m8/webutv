@@ -16,6 +16,11 @@
     margin-top:100px;
 }
 
+.spel-thumb{
+    border-radius:20px;
+    padding: 5px;
+    margin: 20px 20px;
+}
 
 .main-offset-top{
     margin-top:100px;
@@ -34,17 +39,21 @@
     background-color: lightgray;
     color:black;
 }
+
 .btn {
     background-color: rgba(100,0,100,1);
     border-color: rgba(100,0,100,1);
 }
+
 .btn:hover {
     background-color: rgba(100,0,50,1);
     border-color: rgba(100,0,50,1);
 }
-.nav-link{
-    color:white;
+
+.nav-link {
+    color: white;
 }
-.nav-link:hover{
-    color:black;
+
+.nav-link:hover {
+    color: black;
 }
