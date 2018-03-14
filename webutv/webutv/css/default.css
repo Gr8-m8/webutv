@@ -34,3 +34,11 @@
     background-color: lightgray;
     color:black;
 }
+.btn {
+    background-color: rgba(100,0,100,1);
+    border-color: rgba(100,0,100,1);
+}
+    .btn:hover {
+        background-color: rgba(100,0,50,1);
+        border-color: rgba(100,0,50,1);
+    }
