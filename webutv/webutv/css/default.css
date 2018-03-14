@@ -38,7 +38,13 @@
     background-color: rgba(100,0,100,1);
     border-color: rgba(100,0,100,1);
 }
-    .btn:hover {
-        background-color: rgba(100,0,50,1);
-        border-color: rgba(100,0,50,1);
-    }
+.btn:hover {
+    background-color: rgba(100,0,50,1);
+    border-color: rgba(100,0,50,1);
+}
+.nav-link{
+    color:white;
+}
+.nav-link:hover{
+    color:black;
+}
