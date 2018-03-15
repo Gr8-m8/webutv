@@ -1,7 +1,7 @@
 ﻿class MainEditor {
 	constructor() {
 		this.games = [];
-		this.gameSRC;
+		this.gameSRC = "";
 	}
 
 	InitGames(inits) {
@@ -20,7 +20,7 @@
 				} else {
 					//console.log("ERROR: " + this.games[i].name);
 					document.getElementById("main").innerHTML += this.AddSection(this.games[i].tags[t]);
-					document.getElementById(this.games[i].tags[t]).firstElementChild.innerHTML += this.games[i].DisplayGame(); //children.getElementById("displayGames").innerHTML += this.games[i].DisplayGame();
+					document.getElementById(this.games[i].tags[t]).lastElementChild.innerHTML += this.games[i].DisplayGame(); //children.getElementById("displayGames").innerHTML += this.games[i].DisplayGame();
 					console.log(document.getElementById(this.games[i].tags[t]).firstElementChild);
 				}
 			}
@@ -45,7 +45,7 @@
 me = new MainEditor();
 
 class GameThumb {
-	constructor(setname = "RickGame", setImg = "images/Square44x44Logo.targetsize-24_altform-unplated.png", setsrc = "", settags = "fetured") {
+	constructor(setname = "RickGame", setImg = "images/Square44x44Logo.targetsize-24_altform-unplated.png", setsrc = "", settags = "Fetured") {
 		this.name = setname;
 		this.src = setsrc;
 		this.img = setImg;
@@ -87,8 +87,8 @@ window.onload = function () {
 	resizeGame();
 
 	me.InitGames(
-		new GameThumb(),
-		new GameThumb()
+		new GameThumb() &&
+		new GameThumb("SlitherIO", "", "http://slither.io/", "Arcade")
 	);
 }
 
