@@ -1,38 +1,78 @@
-﻿var games = [];
-
-class Game {
-	constructor(setname = "test", setsrc = "", settags = "fetured") {
-		var name = setname;
-		var src = setsrc;
-		var tags = [];
-		tags.push(settags);
+﻿class MainEditor {
+	constructor() {
+		this.games = [];
+		this.gameSRC;
 	}
 
-	displayGame() {
-		return "test";
+	InitGames(inits) {
+		this.games.push(
+			inits
+		);
+
+		this.DisplayGames();
 	}
-}
 
-function initGames() {
-	games.push(
-		new Game("RickGame", "https://17mali.ssis.nu/RickGame/index.html", "fetured")
-	);
-
-	console.log(games[0].name);
-
-	displayGames();
-}
-
-function displayGames() {
-	for (var i = 0; i < games.length; i++) {
-		for (var t = 0; t < games[i].tags.length; t++) {
-			if (document.getElementById(games[i].tags[t]) != undefined || document.getElementById(games[i].tags[t]) != null) {
-				document.getElementById(games[i].tags[t]).innerHTML = games[i].displayGame();
-				console.log("SUCCSESS: " + games[i]);
-			} else {
-				console.log("ERROR: " + games[i]);
+	DisplayGames() {
+		for (var i = 0; i < this.games.length; i++) {
+			for (var t = 0; t < this.games[i].tags.length; t++) {
+				if (document.getElementById(this.games[i].tags[t]) != undefined || document.getElementById(this.games[i].tags[t]) != null) {
+					document.getElementById(this.games[i].tags[t]).firstChild.innerHTML += this.games[i].DisplayGame(); //children.getElementById("displayGames").innerHTML += this.games[i].DisplayGame();
+				} else {
+					//console.log("ERROR: " + this.games[i].name);
+					document.getElementById("main").innerHTML += this.AddSection(this.games[i].tags[t]);
+					document.getElementById(this.games[i].tags[t]).firstElementChild.innerHTML += this.games[i].DisplayGame(); //children.getElementById("displayGames").innerHTML += this.games[i].DisplayGame();
+					console.log(document.getElementById(this.games[i].tags[t]).firstElementChild);
+				}
 			}
 		}
+	}
+
+	AddSection(tag) {
+		return "<section id= '" + tag + "'> " +
+		"<h2>" + tag + "</h2>" +
+		"<div id='displayGames' class='row'>" +
+		"<!--<img src='images/Square150x150Logo.scale-200.png' />-->" +
+		"</div>" +
+		"</section>" +
+		"<hr />";
+	}
+
+	AddGameThumbDisplay() {
+
+	}
+}
+
+me = new MainEditor();
+
+class GameThumb {
+	constructor(setname = "RickGame", setImg = "images/Square44x44Logo.targetsize-24_altform-unplated.png", setsrc = "", settags = "fetured") {
+		this.name = setname;
+		this.src = setsrc;
+		this.img = setImg;
+		this.tags = [];
+		this.tags.push(settags);
+	}
+
+	DisplayGame() {
+		return "<div class='col-md-2 col-sm-3'>" +
+			"<div class='card game-thumb'>" +
+			"<div class='work-img'>" +
+			"<a href='playgame.html'>" +
+			"<img class='card-img-top img-fluid' src='" + this.img + "' alt='Cardimage cap' />" +
+			"</a>" +
+			"<div class='img-overlay'></div>" +
+			"</div>" +
+			"<div class='card-body'>" +
+			"<p class='card-text'>" +
+			this.name +
+			"</p>" +
+			"</div>" +
+			"</div>" +
+			"</div>";
+	}
+
+	SetGameSRC() {
+		return this.src;
 	}
 }
 
@@ -45,7 +85,11 @@ function resizeGame() {
 
 window.onload = function () {
 	resizeGame();
-	initGames();
+
+	me.InitGames(
+		new GameThumb(),
+		new GameThumb()
+	);
 }
 
 window.onresize = function () {
