@@ -37,8 +37,11 @@
 		"<hr />";
 	}
 
-	AddGameThumbDisplay() {
-
+	SetGameSRC(setsrc) {
+		if (document.getElementById("game") != null) {
+			document.getElementById("game").src = setsrc;
+			
+		}
 	}
 }
 
@@ -87,7 +90,7 @@ window.onload = function () {
 	resizeGame();
 
 	me.InitGames(
-		new GameThumb() &&
+		//new GameThumb()
 		new GameThumb("SlitherIO", "", "http://slither.io/", "Arcade")
 	);
 }
