@@ -17,19 +17,22 @@
 	DisplayGames() {
 		for (var i = 0; i < this.games.length; i++) {
 			for (var t = 0; t < this.games[i].tags.length; t++) {
-				if (document.getElementById(this.games[i].tags[t]) != undefined || document.getElementById(this.games[i].tags[t]) != null) {
-					document.getElementById(this.games[i].tags[t]).lastElementChild.innerHTML += this.games[i].DisplayGame(); //children.getElementById("displayGames").innerHTML += this.games[i].DisplayGame();
+				if (document.getElementById("t" + this.games[i].tags[t]) != undefined || document.getElementById(this.games[i].tags[t]) != null) {
+					document.getElementById("t" + this.games[i].tags[t]).lastElementChild.innerHTML += this.games[i].DisplayGame(); //children.getElementById("displayGames").innerHTML += this.games[i].DisplayGame();
 				} else {
 					//console.log("ERROR: " + this.games[i].name);
 					document.getElementById("main").innerHTML += this.AddSection(this.games[i].tags[t]);
-					document.getElementById(this.games[i].tags[t]).lastElementChild.innerHTML += this.games[i].DisplayGame(); //children.getElementById("displayGames").innerHTML += this.games[i].DisplayGame();
+					document.getElementById("t" + this.games[i].tags[t]).lastElementChild.innerHTML += this.games[i].DisplayGame(); //children.getElementById("displayGames").innerHTML += this.games[i].DisplayGame();
 				}
 			}
 		}
 	}
 
 	AddSection(tag) {
-		return "<section id= '" + tag + "'> " +
+
+		this.AddSectionLink(tag);
+
+		return "<section id= 't" + tag + "'> " +
 		"<h2>" + tag + "</h2>" +
 		"<div id='displayGames' class='row'>" +
 		"<!--<img src='images/Square150x150Logo.scale-200.png' />-->" +
@@ -38,10 +41,20 @@
 		"<hr />";
 	}
 
+	AddSectionLink(tag) {
+		//console.log("<li class='nav-item col-sm-3'>" + "<a class='nav-link' href='#t" + tag + "'>" + tag + "</a>" + "</li>");
+
+		document.getElementById("navbar-list").innerHTML +=
+			"<li class='nav-item col-sm-3'>" + "<a class='nav-link' href='#t" + tag + "'>" + tag + "</a>" + "</li>";
+
+		//document.getElementById("navbar-list").lastElementChild.innerHTML +=
+		//	"<a class='nav-link' href='#" + tag + ">" + tag + "</a>";
+			
+	}
+
 	SetGameSRC(setsrc) {
 		if (document.getElementById("game") != null) {
 			document.getElementById("game").src = setsrc;
-			
 		}
 	}
 }
