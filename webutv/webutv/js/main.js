@@ -103,9 +103,9 @@ window.onload = function () {
 
 	me.InitGames(
 		[
-			new GameThumb("Rick Game", "https://17mali.ssis.nu/RickGame/index.html", ["Fetured", "Arcade"]),
+			new GameThumb("Rick Game", "https://17mali.ssis.nu/RickGame/index.html", ["Featured", "Arcade"]),
 			new GameThumb("Slither.IO", "http://slither.io/", ["Arcade"]),
-			new GameThumb("Agar.IO", "http://agar.io/", ["Arcade"])
+            new GameThumb("Agar.IO", "http://agar.io/", ["Arcade"])
 		]
 	);
 }
