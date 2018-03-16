@@ -1,6 +1,7 @@
 ﻿body {
     background-color: rgba(100,0,100,1);
-  
+    background-image: url("../images/retrooutrun.jpg");
+    background-size: cover;
 }
 
 
@@ -45,7 +46,8 @@
 
 .main-color-context {
     background-color: lightgray;
-    color:black;
+    background-color: rgba(128, 128, 128, 0.95);
+    color: black;
 }
 
 .btn {
