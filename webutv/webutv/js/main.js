@@ -114,13 +114,15 @@ window.onload = function () {
 		document.getElementById("game").src = me.gameSRC;
 	}
 
-	me.InitGames(
-		[
-			new GameThumb("Rick Game", "https://17mali.ssis.nu/RickGame/index.html", ["Featured", "Arcade"]),
-			new GameThumb("Slither.IO", "http://slither.io/", ["Arcade"]),
-            new GameThumb("Agar.IO", "http://agar.io/", ["Arcade"])
-		]
-	);
+	if (document.getElementById("main") != null || document.getElementById("main") != undefined) {
+		me.InitGames(
+			[
+				new GameThumb("Rick Game", "https://17mali.ssis.nu/RickGame/index.html", ["Featured", "Arcade"]),
+				new GameThumb("Slither.IO", "http://slither.io/", ["Arcade"]),
+				new GameThumb("Agar.IO", "http://agar.io/", ["Arcade"])
+			]
+		);
+	}
 }
 
 window.onresize = function () {
