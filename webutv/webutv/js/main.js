@@ -33,12 +33,13 @@
 		this.AddSectionLink(tag);
 
 		return "<section id= 't" + tag + "'> " +
-		"<h2>" + tag + "</h2>" +
-		"<div id='displayGames' class='row'>" +
-		"<!--<img src='images/Square150x150Logo.scale-200.png' />-->" +
-		"</div>" +
-		"</section>" +
-		"<hr />";
+					"<h2>" + tag + "</h2>" +
+					"<div class='container-fluid'>" +
+						"<div id='displayGames' class='row'>" +
+						"</div>" +
+					"</div>" +
+				"</section>" +
+				"<hr />";
 	}
 
 	AddSectionLink(tag) {
