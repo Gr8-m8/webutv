@@ -33,9 +33,10 @@
 		this.AddSectionLink(tag);
 
 		return "<section id= 't" + tag + "'> " +
-					"<h2>" + tag + "</h2>" +
 					"<div class='container-fluid'>" +
+						"<h2>" + tag + "</h2>" +
 						"<div id='displayGames' class='row'>" +
+
 						"</div>" +
 					"</div>" +
 				"</section>" +
@@ -73,21 +74,10 @@ class GameThumb {
 	}
 
 	DisplayGame() {
-		return "<div class='col-md-2 col-sm-3'>" +
-			"<div class='card game-thumb'>" +
-			"<div class='work-img'>" +
-			"<a href='playgame.html'>" +
-			"<img class='card-img-top img-fluid' src='" + this.img + "' alt='Cardimage cap' />" +
-			"</a>" +
-			"<div class='img-overlay'></div>" +
-			"</div>" +
-			"<div class='card-body'>" +
-			"<p class='card-text'>" +
-			this.name +
-			"</p>" +
-			"</div>" +
-			"</div>" +
-			"</div>";
+		return "<button id='gameImg' class='main-color-info col-md-2 col-sm-3' style='border-radius:12px;' oncklick='LoadaGame(test)'>" +
+			"<img class='card-img-top img-fluid' src='" + this.img + "' alt='MISSING IMG' />" +
+			"<p>" + this.name + "</p>" +
+			"</button>";
 	}
 
 	SetGameSRC() {
@@ -101,10 +91,14 @@ class GameThumb {
 	}
 }
 
+function LoadaGame(src = "") {
+	window.location.href = "playgame.html";
+	me.SetGameSRC = src;
+}
+
 function resizeGame() {
 	if (document.getElementById("game") != null) {
 		document.getElementById("game").style.height = 9 * document.getElementById("game").scrollWidth / 20 + "px";
-		//console.log(document.getElementById("game"));
 	}
 }
 
