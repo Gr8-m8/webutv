@@ -1,4 +1,10 @@
-﻿body {
+﻿@media only screen and (max-width: 575px){
+    .main{
+        text-align:center;
+    }
+}
+
+body {
     background-color: rgba(100,0,100,1);
     background-image: url("../images/retrooutrun.jpg");
     background-size: cover;

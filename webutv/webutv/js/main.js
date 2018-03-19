@@ -71,7 +71,7 @@ class GameThumb {
 	}
 
 	DisplayGame() {
-		return "<button id='gameImg' class='main-color-info col-md-2 col-sm-3' style='border-radius:12px;' onclick='LoadGame(me.games[" + this.initNum + "].src)'>" +
+		return "<button id='gameImg' class='main-color-info col-md-2 col-sm-3 col-12' style='border-radius:12px;' onclick='LoadGame(me.games[" + this.initNum + "].src)'>" +
 			"<img class='card-img-top img-fluid' src='" + this.img + "' alt='MISSING IMG' />" +
 			"<p>" + this.name + "</p>" +
 			"</button>";
