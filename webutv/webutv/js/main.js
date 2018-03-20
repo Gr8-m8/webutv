@@ -71,8 +71,8 @@ class GameThumb {
 	}
 
 	DisplayGame() {
-		return "<button id='gameImg' class='main-color-info col-md-2 col-sm-3 col-12' style='border-radius:12px;' onclick='LoadGame(me.games[" + this.initNum + "].src)'>" +
-			"<img class='card-img-top img-fluid' src='" + this.img + "' alt='MISSING IMG' />" +
+		return "<button id='gameImg' class='main-color-info spel-thumb col-md-2 col-sm-3 col-12' onclick='LoadGame(me.games[" + this.initNum + "].src)'>" +
+			"<img class='spel-thumb-img img-fluid' src='" + this.img + "' alt='MISSING IMG' />" +
 			"<p>" + this.name + "</p>" +
 			"</button>";
 	}
@@ -112,9 +112,9 @@ window.onload = function () {
 	if (document.getElementById("main") != null || document.getElementById("main") != undefined) {
 		me.InitGames(
 			[
-				new GameThumb("RickGame", "https://17mali.ssis.nu/RickGame/index.html", ["Featured", "Arcade"]),
-				new GameThumb("Slither.IO", "http://slither.io/", ["Arcade"]),
-				new GameThumb("Agar.IO", "http://agar.io/", ["Arcade"])
+				new GameThumb("RickGame", "https://17mali.ssis.nu/RickGame/index.html", ["Featured", "Arcade"], "images/RickGame.png"),
+				new GameThumb("Slither.IO", "http://slither.io/", ["Arcade"], "images/slitherio.jpg"),
+				new GameThumb("Agar.IO", "http://agar.io/", ["Arcade"], "images/agario.jpg")
 			]
 		);
 	}

@@ -59,7 +59,10 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <Content Include="css\signin1.css" />
+    <Content Include="images\agario.jpg" />
     <Content Include="images\retrooutrun.jpg" />
+    <Content Include="images\RickGame.png" />
+    <Content Include="images\slitherio.jpg" />
     <Content Include="index.html" />
     <Content Include="images\LockScreenLogo.scale-200.png" />
     <Content Include="images\SplashScreen.scale-200.png" />

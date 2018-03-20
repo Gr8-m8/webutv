@@ -26,9 +26,17 @@ body {
 }
 
 .spel-thumb{
-    border-radius:200px;
-    padding: 5px;
-    margin: 20px 20px;
+    padding:5px;
+    width:205px;
+    height:205px;
+    border-radius:12px;
+}
+
+.spel-thumb-img{
+    height:80%;
+    width:80%;
+    border-radius:12px;
+    background-color:gray;
 }
 
 .spel-ruta{
@@ -41,7 +49,11 @@ body {
 }
 
 .main-offset-left{
+    margin:0 auto;
+}
 
+.mainContainerPadding{
+    padding:1%;
 }
 
 .main-color-info {
