@@ -90,13 +90,13 @@ class GameThumb {
 
 function LoadGame(src = "") {
 	console.log("lg: " + src);
-	window.location.href = "playgame.html?" + src;
+	window.location.href = "playgame.html?&" + src;
 	me.SetGameSRC = src;
 }
 
 function resizeGame() {
 	if (document.getElementById("game") != null) {
-		document.getElementById("game").style.height = 9 * document.getElementById("game").scrollWidth / 20 + "px";
+		document.getElementById("game").style.height = 9 * document.getElementById("game").scrollWidth / 16 + "px";
 	}
 }
 
@@ -105,6 +105,7 @@ window.onload = function () {
 
 	if (document.getElementById("game") != null) {
 		var startSlicePos = window.location.href.split("?");
+		startSlicePos = startSlicePos[1].split("&");
 		document.getElementById("game").src = startSlicePos[1];
 	}
 
