@@ -88,7 +88,7 @@ body {
 
 h1, h2, h3 {
     margin: 0 0 35px 0;
-    text-transform: uppercase;
+    //text-transform: uppercase;
     letter-spacing: 1px;
 }
 
@@ -102,10 +102,10 @@ a {
     color: #26a5d3;
 }
 
-    a:hover, a:focus {
-        text-decoration: none;
-        color: #26a5d3;
-    }
+a:hover, a:focus {
+    text-decoration: none;
+    color: #26a5d3;
+}
 
 
 form-control {
