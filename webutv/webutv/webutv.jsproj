@@ -58,7 +58,7 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <Content Include="css\signin1.css" />
+    <Content Include="contact.html" />
     <Content Include="images\agario.jpg" />
     <Content Include="images\retrooutrun.jpg" />
     <Content Include="images\RickGame.png" />
@@ -73,7 +73,6 @@
     <Content Include="images\Wide310x150Logo.scale-200.png" />
     <Content Include="js\main.js" />
     <Content Include="css\default.css" />
-    <Content Include="signin2.html" />
     <Content Include="playgame.html" />
     <Content Include="signin.html" />
     <None Include="webutv_TemporaryKey.pfx" />
