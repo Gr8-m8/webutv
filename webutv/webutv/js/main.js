@@ -114,7 +114,8 @@ window.onload = function () {
 			[
 				new GameThumb("RickGame", "https://17mali.ssis.nu/RickGame/index.html", ["Featured", "Arcade"], "images/RickGame.png"),
 				new GameThumb("Slither.IO", "http://slither.io/", ["Arcade"], "images/slitherio.jpg"),
-				new GameThumb("Agar.IO", "http://agar.io/", ["Arcade"], "images/agario.jpg")
+				new GameThumb("Agar.IO", "http://agar.io/", ["Arcade"], "images/agario.jpg"),
+				new GameThumb("Super Mario 63", "https://www.newgrounds.com/portal/view/498969", ["Platformer"], "images/supermario63.png")
 			]
 		);
 	}
