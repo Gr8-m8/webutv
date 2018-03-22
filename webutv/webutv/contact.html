@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Spelsajten.se/Sign-in</title>
+    <title>Spelsajten.se</title>
     <link rel="shortcut icon" href="images/StoreLogo.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="fontawesome/web-fonts-with-css/css/fontawesome-all.css">
@@ -23,36 +23,44 @@
         <a class="btn btn-success my-2 my-sm-0 ml-right" type="submit" href="index.html">Go Back</a>
     </nav>
 
-    <section id="signin">
-        <div class="col-md-8 main main-color-context main-offset-top mainContainerPadding">
-            <div class="container-fluid">
-                <div class="row" align="center">
-                    <div class="col-md-12">
-                        <img src="images/Square150x150Logo.scale-200.png" />
-                    </div>
-                </div>
-                <div class="row d-md-block" align="center">
-                    <div class="col-md-8">
-                        <fieldset class="form-group">
-                            <label for="inputEmail" class="sr-only">Email address</label>
-                            <input type="email" id="inputemail" class="form-control col-md-10" placeholder="Email address" required autofocus>
-                        </fieldset>
-                        <fieldset class="form-group">
-                            <label for="inputPasword" class="sr-only">Password</label>
-                            <input type="password" id="inputPassword" class="form-control col-md-10" placeholder="Password" required autofocus>
-                        </fieldset>
-                        <label>
-                            <input type="checkbox" value="remember-me">
-                            "Remember me"
-                        </label>
-                        <button class="btn col-md-10 btn-primary" type="submit" style="margin-top:30px;">
-                            Sign in
-                        </button>
+
+    <div class="col-md-8 main main-color-context main-offset-top mainContainerPadding">
+        <section id="contact" class="content-section text-center">
+            <div class="contact-fluid">
+                <div class="container">
+                    <div class="row" align="center">
+                        <div class="col-md-12">
+                        <h2>Contact Us</h2>
+                        <div class="col-md-8 col-md-offset-5">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="exampleInputName2">Name</label>
+                                    <input type="text" class="form-control" id="exampleInputName2" placeholder="111q2w3e" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail2">Email</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="sdfysgd@hotmail.com"
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputText">your Message</label>
+                                    <textarea type="text" class="form-control" placeholder="Description"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-default">Send Message</button>
+                            </form>
+                        </div>
+                            <hr>
+                            <h3>Our Social Sites</h3>
+                            <ul class="list-inline banner-social-buttons">
+                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-twitter"> <span class="network-name">Twitter</span></i></a>
+                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-facebook"> <span class="network-name">Facebook</span></i></a>
+                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-youtube-play"> <span class="network-name">Youtube</span></i></a>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <div class="container-fluid about main-color-info main-offset-top">
         <section id="about" class="">
@@ -60,13 +68,13 @@
                 <div class="col-md-10">
                     <img src="images/Square150x150Logo.scale-200.png" style="float:left;" />
                     <p style="float:left; margin-top:30px;">
-                        TEXT ABOUT US, (ONLY FETURED GAMES ARE CRATED BY US)
+                        TEXT ABOUT, US (ONLY FETURED GAMES ARE CRATED BY US)
                     </p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-5">
-                    <a class="btn col-md-10 btn-primary" href="contact.html" style="">
+                    <a class="btn col-md-10 btn-primary" href="#contact" style="">
                         Contact Us
                     </a>
                 </div>

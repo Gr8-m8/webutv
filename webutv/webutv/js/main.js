@@ -45,7 +45,7 @@
 
 	AddSectionLink(tag) {
 		document.getElementById("navbar-list").innerHTML +=
-			"<li class='nav-item col-sm-3'>" + "<a class='nav-link' href='#t" + tag + "'>" + tag + "</a>" + "</li>";
+			"<li class='nav-item col-sm-5'>" + "<a class='nav-link' href='#t" + tag + "'>" + tag + "</a>" + "</li>";
 
 	}
 
