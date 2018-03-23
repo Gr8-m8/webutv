@@ -1,9 +1,12 @@
-﻿@media only screen and (max-width: 575px){
+﻿
+@media only screen and (max-width: 575px){
     .main{
         text-align:center;
     }
 }
+<!--RESPONSIV CSS
 
+<!--BODYNS EGENSKAPER
 body {
     background-color: rgba(100,0,100,1);
     //background-image: url("../images/retrooutrun.jpg");
@@ -11,21 +14,25 @@ body {
     overflow-x:hidden;
 }
 
+<!--NAVBARENS EGENSKAPER
 .navbar {
     background-color: rgba(255, 0, 0, 0.9);
 }
 
+<!--HUVUDDELARNAS EGENSKAPER
 .main {
     margin: 0 auto;
     margin-top: 100px;
     border-radius: 20px;
 }
 
+<!--FOOTERNS EGENSKAPER
 .about {
     margin-top:100px;
     bottom:0;
 }
 
+<!--JS INSTANSIERADE LÄNKAR
 .spel-thumb{
     padding:5px;
     width:205px;
@@ -33,6 +40,7 @@ body {
     border-radius:12px;
 }
 
+<!--JS INSTANSIERADE LÄNKAR BILDER
 .spel-thumb-img{
     height:80%;
     width:80%;
@@ -45,29 +53,35 @@ body {
     width:100%;
 }
 
+<!--STANDARD FÖR MARGINAL TOP
 .main-offset-top{
     margin-top:100px;
 }
 
+<!--STANDARD FÖR MARGINAL VÄNSTER
 .main-offset-left{
     margin:0 auto;
 }
 
+<!--STANDARD FÖR PADDING
 .mainContainerPadding{
     padding:1%;
 }
 
+<!--STANDARD FÄRG FÖR INFORMATIONSFÄLT (NAVBAR, ABOUT)
 .main-color-info {
     background-color: rgba(255, 0, 0, 0.9);
     color:white;
 }
 
+<!--STANDARD FÄRG FÖR HUVUDEL
 .main-color-context {
     background-color: lightgray;
     background-color: rgba(128, 128, 128, 0.95);
     color: black;
 }
 
+<!--ÄNDRAR FÄRG FÖR BOOTSTRAP STANDARD
 .btn {
     background-color: rgba(100,0,100,1);
     border-color: rgba(100,0,100,1);
@@ -86,6 +100,7 @@ body {
     color: black;
 }
 
+<!--ÄNDRAR STANDARD FÖR VANLIGA ELEMENT
 h1, h2, h3 {
     margin: 0 0 35px 0;
     //text-transform: uppercase;

@@ -1,9 +1,11 @@
-﻿class MainEditor {
+﻿//CLASS FÖR HANTERANDE
+class MainEditor {
 	constructor() {
 		this.games = [];
 		this.gameSRC = "";
 	}
 
+	//SÄTTER SPEL I LISTA
 	InitGames(inits = []) {
 		for (var i = 0; i < inits.length; i++) {
 			this.games.push(
@@ -14,6 +16,7 @@
 		this.DisplayGames();
 	}
 
+	//SÄTTER SPELEN PÅ HEMSIDAN
 	DisplayGames() {
 		for (var i = 0; i < this.games.length; i++) {
 			this.games[i].initNum = i;
@@ -28,6 +31,7 @@
 		}
 	}
 
+	//LÄGGER TILL EN SECTION FÖR SPEL
 	AddSection(tag) {
 
 		this.AddSectionLink(tag);
@@ -43,12 +47,14 @@
 				"<hr />";
 	}
 
+	//LÄGGER TILL EN NAVBAR LINK TILL SECTION
 	AddSectionLink(tag) {
 		document.getElementById("navbar-list").innerHTML +=
 			"<li class='nav-item col-sm-5'>" + "<a class='nav-link' href='#t" + tag + "'>" + tag + "</a>" + "</li>";
 
 	}
 
+	//SÄTTER LÄNKEN I IFRAME
 	SetGameSRC(setsrc) {
 		if (document.getElementById("game") != null) {
 			document.getElementById("game").src = setsrc;
@@ -58,6 +64,7 @@
 
 me = new MainEditor();
 
+//SPEL
 class GameThumb {
 	constructor(setname = "RickGame", setsrc = "", settags = ["fetured"], setImg = "images/Square44x44Logo.targetsize-24_altform-unplated.png") {
 		this.name = setname;
@@ -70,6 +77,7 @@ class GameThumb {
 		this.InitTags(settags);
 	}
 
+	//HTML SPEL ELEMENT
 	DisplayGame() {
 		return "<button id='gameImg' class='main-color-info spel-thumb col-md-2 col-sm-3 col-12' onclick='LoadGame(me.games[" + this.initNum + "].src)'>" +
 			"<img class='spel-thumb-img img-fluid' src='" + this.img + "' alt='MISSING IMG' />" +
@@ -77,10 +85,12 @@ class GameThumb {
 			"</button>";
 	}
 
+	//SPELLÄNK
 	SetGameSRC() {
 		return this.src;
 	}
 
+	//SÄTTER TAGGAR PÅ SPELET
 	InitTags(inits = []) {
 		for (var i = 0; i < inits.length; i++) {
 			this.tags.push(inits[i]);
@@ -88,18 +98,21 @@ class GameThumb {
 	}
 }
 
+//VIDAREBEFODRAR LÄNK FRÅN INDEX.HTML TILL PLAYGAME.HTML OCH LÄNKAR IFRAME
 function LoadGame(src = "") {
 	console.log("lg: " + src);
 	window.location.href = "playgame.html?&" + src;
 	me.SetGameSRC = src;
 }
 
+//SKALAR IFRAME 16/9
 function resizeGame() {
 	if (document.getElementById("game") != null) {
 		document.getElementById("game").style.height = 9 * document.getElementById("game").scrollWidth / 16 + "px";
 	}
 }
 
+//START AV SCRIPT
 window.onload = function () {
 	resizeGame();
 
