@@ -19,6 +19,10 @@ body {
     //NAVBARENS EGENSKAPER
 }
 
+.navImg{
+    width:50px;
+    height:50px;
+}
 
 .main {
     margin: 0 auto;

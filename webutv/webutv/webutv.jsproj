@@ -64,6 +64,7 @@
     <Content Include="images\RickGame.png" />
     <Content Include="images\slitherio.jpg" />
     <Content Include="images\snakelogo.png" />
+    <Content Include="images\snakelogo_BIG.png" />
     <Content Include="images\supermario63.png" />
     <Content Include="index.html" />
     <Content Include="images\LockScreenLogo.scale-200.png" />
