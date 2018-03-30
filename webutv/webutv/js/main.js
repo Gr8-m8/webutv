@@ -50,7 +50,7 @@ class MainEditor {
 	//LÄGGER TILL EN NAVBAR LINK TILL SECTION
 	AddSectionLink(tag) {
 		document.getElementById("navbar-list").innerHTML +=
-			"<li class='nav-item col-sm-5'>" + "<a class='nav-link' href='#t" + tag + "'>" + tag + "</a>" + "</li>";
+			"<li class='nav-item col-sm-5'>" + "<a class='nav-link' href='#t" + tag + "' onclick='WaitFor(ScrollSection, 5)'>" + tag + "</a>" + "</li>";
 
 	}
 
@@ -136,4 +136,24 @@ window.onload = function () {
 
 window.onresize = function () {
 	resizeGame();
+}
+
+function WaitFor(func, time) {
+	setTimeout(func, time);
+}
+
+function ScrollToBottom() {
+	window.scrollTo(0, document.body.scrollHeight);
+}
+
+function ScrollSection() {
+	if (window.scrollY <= document.body.scrollHeight - 457 - 100 ) {
+		window.scrollBy(0, -100);
+	}
+}
+
+function Scroll(from = ScrollToBottom, lenght = 1000) {
+	for (var i = 0; i < lenght; i++) {
+		setTimeout(ScrollToBottom, i);
+	}
 }
