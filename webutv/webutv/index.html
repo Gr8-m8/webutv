@@ -4,7 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Spelsajten.se</title>
+
+    <!--EGEN IKON PÅ TABEN-->
     <link rel="shortcut icon" href="images/snakelogo_BIG.png">
+
+    <!--CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="fontawesome/web-fonts-with-css/css/fontawesome-all.css">
     <link href="css/default.css" rel="stylesheet" />
@@ -12,24 +16,28 @@
 <body>
     <!--NAVIGATION BAR-->
     <nav id="navigationBar" class="navbar navbar-expand-lg fixed-top main-color-info" style="border-bottom: 1px solid darkred;">
+        <!--BILD-->
         <a class="navbar-brand" href="#"><img src="images/snakelogo_BIG.png" class="img-fluid ml-left navImg"  /></a>
 
+        <!--KNAPP FÖR ATT ÖPPNA/STÄNGA #navigation-bar-->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation-bar">
             <span class="navbar-toggler-icon">&#9776;</span>
         </button>
         
+        <!--DIV MED LISTA FÖR ALLA NAVIGATIONSLÄNKAR-->
         <div class="collapse navbar-collapse" id="navigation-bar">
             <ul id="navbar-list" class="navbar-nav ml-left">
-
                 <li class="nav-item col-sm-5"><a class="nav-link" href="#about">About Us</a></li>
-                <!--JS SKAPAR LÄNKAR HÄR-->
+                <!--JS SKAPAR LÄNKAR HÄR [51]-->
             </ul>
         </div>
 
+        <!--FORMULÄR FÖR ATT MAN SKA KUNNA SÖKA-->
         <form class="form-inline my-right my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn my-2 my-sm-0" type="submit">Search</button>
-            <a class="btn my-2 my-sm-0" type="submit" href="signin.html">Sign in</a>
+            <!--LÄNK FÖR SIGNIN-->
+            <a class="btn my-2 my-sm-0" href="signin.html#signin">Sign in</a>
         </form>
     </nav>
 
@@ -37,22 +45,26 @@
     <!--HUVUDDEL-->
     <div id="main" class="col-md-10 main main-color-context main-offset-top">
         <span id="gameImg"></span>
-        <!--JS SKAPAR SPELLÄNKAR HÄR-->
+        <!--JS SKAPAR SPELLÄNKAR HÄR [35, 81]-->
     </div>
 
     <!--FOOTER MED INFORMATION OM OSS-->
     <div id="footer" class="container-fluid about main-color-info main-offset-top mainContainerPadding">
         <section id="about" class="">
+
+            <!--BOOTSTRAP RESPONSIBEL TABELL-->
             <div class="row mainContainerPadding">
+                <!--BILD-->
                 <div class="col-12 col-md-2 col-sm-2" style="text-align:center;">
                     <img class="col-md-12" src="images/snakelogo_BIG.png" style="" />
                 </div>
+                <!--INFORMATION-->
                 <div class="col-12 col-md-8 col-sm-7">
                     <p>
                         Spelsajten är en hub för spel. OBS bara spel under fetured sectionen är skapade av oss
                     </p>
                 </div>
-                
+                <!--DONERA-->
                 <div class="col-12 col-md-2 col-sm-3" style="color:black;">
                     <div class="card mainContainerPadding main-color-context">
                         <div class="card-header" style="text-align:center;"><b>DONATE</b></div>
@@ -72,54 +84,60 @@
                         </ul>
                     </div>
                 </div>
-
             </div>
 
             <hr />
 
             <div class="row">
+                <!--EN KNAPP SOM ÖPPNAR STÄNGER #contact-->
                 <button class="navbar-toggler btn col-md-12 col-12 col-sm-12 btn-lg" type="button" data-toggle="collapse" data-target="#contact" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" align="center" onclick="Scroll()">
-                    <a>Contact us</a>
+                    Contact us
                 </button>
 
-                <div id="contact" class="col-md-8 main main-color-context mainContainerPadding collapse main-offset-top">
-                    <section id="" class="content-section text-center">
-                        <div class="contact-fluid">
-                            <div class="container">
-                                <div class="row" align="center">
-                                    <div class="col-md-12">
-                                        <h2>Contact Us</h2>
-                                        <div class="col-md-8">
-                                            <form class="form-horizontal">
+                <!--DIV FÖR MEDELANDEN-->
+                <div id="contact" class="col-md-8 main main-color-context mainContainerPadding collapse main-offset-top content-section text-center">
+                    <div class="container">
+                        <div class="row" align="center">
+                            <div class="col-md-12">
+                                <h2>Contact Us</h2>
+                                <div class="col-md-8">
 
-                                                <div class="form-group">
-                                                    <label for="exampleInputName2">Name</label>
-                                                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Username  |  example: gamer123" />
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="exampleInputEmail2">Email</label>
-                                                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="E-Mail  |  example: name@gmail.com"
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="exampleInputText">Your Message</label>
-                                                    <textarea type="text" class="form-control" placeholder="Message  |  example: Love your selection of games! Keep up the good work!"></textarea>
-                                                </div>
-                                                <button type="submit" value="Send" class="btn btn-default">Send Message</button>
-
-                                            </form>
+                                    <!--FORMULÖR FÖR ATT SKICKA MEDELANDEN-->
+                                    <form class="form-horizontal">
+                                        <!--ANVÄNDARE-->
+                                        <div class="form-group">
+                                            <label for="exampleInputName2">Name</label>
+                                            <input type="text" class="form-control" id="exampleInputName2" placeholder="Username  |  example: gamer123" />
                                         </div>
-                                        <hr>
-                                        <h3>Our Social Sites</h3>
-                                        <ul class="list-inline banner-social-buttons">
-                                            <a href="#" class="btn btn-default btn-lg"><i class=" fa-twitter-play"> <span class="network-name">Twitter</span></i></a>
-                                            <a href="#" class="btn btn-default btn-lg"><i class=" fa-facebook-play"> <span class="network-name">Facebook</span></i></a>
-                                            <a href="#" class="btn btn-default btn-lg"><i class=" fa-youtube-play"> <span class="network-name">Youtube</span></i></a>
-                                        </ul>
-                                    </div>
+                                        <!--E-MAIL-->
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail2">Email</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="E-Mail  |  example: name@gmail.com"
+                                        </div>
+                                        <!--MEDELANDE-->
+                                        <div class="form-group">
+                                            <label for="exampleInputText">Your Message</label>
+                                            <textarea type="text" class="form-control" placeholder="Message  |  example: Love your selection of games! Keep up the good work!"></textarea>
+                                        </div>
+                                        <button type="submit" value="Send" class="btn btn-default">Send Message</button>
+                                    </form>
+
+                                </div>
+
+                                <hr>
+                                
+                                <!--SOCIALA LÄNKAR-->
+                                <div>
+                                    <h3>Our Social Sites</h3>
+                                    <ul class="list-inline banner-social-buttons">
+                                        <a href="#" class="btn btn-default btn-lg"><i class=" fa-twitter-play"> <span class="network-name">Twitter</span></i></a>
+                                        <a href="#" class="btn btn-default btn-lg"><i class=" fa-facebook-play"> <span class="network-name">Facebook</span></i></a>
+                                        <a href="#" class="btn btn-default btn-lg"><i class=" fa-youtube-play"> <span class="network-name">Youtube</span></i></a>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </div>
                 </div>
 
             </div>

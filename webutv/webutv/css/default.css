@@ -1,7 +1,11 @@
 ﻿/*RESPONSIV CSS */
 @media only screen and (max-width: 575px){
-    .main {
+    body {
         text-align: center;
+    }
+
+    .main-offset-top{
+        margin-top:5px;
     }
 }
 
@@ -62,6 +66,7 @@ body {
 /*STANDARD FÖR MARGINAL TOP*/
 .main-offset-top {
     margin-top: 100px;
+    //margin-top:20%;
 }
 
 /*STANDARD FÖR MARGINAL VÄNSTER*/

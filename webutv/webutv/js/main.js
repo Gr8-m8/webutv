@@ -62,6 +62,7 @@ class MainEditor {
 	}
 }
 
+//EN ISNSTANS AV MainEditor
 me = new MainEditor();
 
 //SPEL
@@ -98,7 +99,7 @@ class GameThumb {
 	}
 }
 
-//VIDAREBEFODRAR LÄNK FRÅN INDEX.HTML TILL PLAYGAME.HTML OCH LÄNKAR IFRAME
+//VIDAREBEFODRAR LÄNK FRÅN INDEX.HTML TILL PLAYGAME.HTML URL
 function LoadGame(src = "") {
 	console.log("lg: " + src);
 	window.location.href = "playgame.html?&" + src;
@@ -116,12 +117,14 @@ function resizeGame() {
 window.onload = function () {
 	resizeGame();
 
+	//KOLLAR OM IFRAMEN FÖR SPEL FINNS, OCH I SÅDANA FALL SÄTTER IN LÄNKEN I IFRAMEN FRÅN URL
 	if (document.getElementById("game") != null) {
 		var startSlicePos = window.location.href.split("?");
 		startSlicePos = startSlicePos[1].split("&");
 		document.getElementById("game").src = startSlicePos[1];
 	}
 
+	//KOLLAR OM DETTA ÄR HUVUDSIDAN, OCH I SÅDANA FALL SKAPAR SPELEN
 	if (document.getElementById("main") != null || document.getElementById("main") != undefined) {
 		me.InitGames(
 			[
@@ -138,20 +141,19 @@ window.onresize = function () {
 	resizeGame();
 }
 
-function WaitFor(func, time) {
-	setTimeout(func, time);
-}
-
-function ScrollToBottom() {
-	window.scrollTo(0, document.body.scrollHeight);
-}
-
+//JUSTERAR SÅ ATT NAVBAREN INTE ÖVERLAPPAR SPELSECTIONEN, EFTER ATT HA TRYCKT PÅ SPELSECTION LÄNK
 function ScrollSection() {
-	if (window.scrollY <= document.body.scrollHeight - 457 - 100 ) {
+	if (window.scrollY <= document.body.scrollHeight - 457 - 100) {
 		window.scrollBy(0, -100);
 	}
 }
 
+//ANVÄNDS IS Scroll() FÖR ATT SCROLLA NEDÅT
+function ScrollToBottom() {
+	window.scrollTo(0, document.body.scrollHeight);
+}
+
+//SCROLLAR TILL BOTTEN AV SIDAN I 1 SEKUND
 function Scroll(from = ScrollToBottom, lenght = 1000) {
 	for (var i = 0; i < lenght; i++) {
 		setTimeout(ScrollToBottom, i);
