@@ -11,7 +11,7 @@
 </head>
 <body>
     <!--NAVIGATION BAR-->
-    <nav class="navbar navbar-expand-lg fixed-top main-color-info" style="border-bottom: 1px solid darkred;">
+    <nav id="navigationBar" class="navbar navbar-expand-lg fixed-top main-color-info" style="border-bottom: 1px solid darkred;">
         <a class="navbar-brand" href="#"><img src="images/snakelogo_BIG.png" class="img-fluid ml-left navImg"  /></a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation-bar">
@@ -29,17 +29,19 @@
         <form class="form-inline my-right my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn my-2 my-sm-0" type="submit">Search</button>
-            <a class="btn my-2 my-sm-0" type="submit" href="signin.html" style="color:black;">Sign in</a>
+            <a class="btn my-2 my-sm-0" type="submit" href="signin.html">Sign in</a>
         </form>
     </nav>
 
+
+    <!--HUVUDDEL-->
     <div id="main" class="col-md-10 main main-color-context main-offset-top">
         <span id="gameImg"></span>
         <!--JS SKAPAR SPELLÄNKAR HÄR-->
     </div>
 
     <!--FOOTER MED INFORMATION OM OSS-->
-    <div class="container-fluid about main-color-info main-offset-top mainContainerPadding">
+    <div id="footer" class="container-fluid about main-color-info main-offset-top mainContainerPadding">
         <section id="about" class="">
             <div class="row mainContainerPadding">
                 <div class="col-12 col-md-2 col-sm-2" style="text-align:center;">
@@ -50,8 +52,9 @@
                         Spelsajten är en hub för spel. OBS bara spel under fetured sectionen är skapade av oss
                     </p>
                 </div>
+                
                 <div class="col-12 col-md-2 col-sm-3" style="color:black;">
-                    <div class="card mainContainerPadding">
+                    <div class="card mainContainerPadding main-color-context">
                         <div class="card-header" style="text-align:center;"><b>DONATE</b></div>
                         <ul class="list-group list group-flush">
                             <li class="list-group-item btn">
@@ -69,6 +72,7 @@
                         </ul>
                     </div>
                 </div>
+
             </div>
 
             <hr />

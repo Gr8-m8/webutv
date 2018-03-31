@@ -50,7 +50,7 @@ body {
 .spel-thumb-img {
     height: 80%;
     width: 80%;
-    border-radius: 12px;
+    //border-radius: 12px;
     background-color: gray;
 }
 
@@ -93,11 +93,13 @@ body {
 .btn {
     background-color: rgba(100,0,100,1);
     border-color: rgba(100,0,100,1);
+    color:white;
 }
 
 .btn:hover {
     background-color: rgba(100,0,50,1);
     border-color: rgba(100,0,50,1);
+    color:black;
 }
 
 .nav-link {
@@ -127,7 +129,8 @@ a {
 
 a:hover, a:focus {
     text-decoration: none;
-    color: #26a5d3;
+    color:black;
+    //color: #26a5d3;
 }
 
 
@@ -137,4 +140,8 @@ form-control {
 
 td{
     max-width:33%;
+}
+
+img{
+    border-radius:12%;    
 }
