@@ -34,8 +34,8 @@
 
         <!--FORMULÄR FÖR ATT MAN SKA KUNNA SÖKA-->
         <form class="form-inline my-right my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn my-2 my-sm-0" type="submit">Search</button>
+            <input id="searchGame" onkeyup="Search()" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn my-2 my-sm-0" type="submit" onclick="Search()">Search</button>
             <!--LÄNK FÖR SIGNIN-->
             <a class="btn my-2 my-sm-0" href="signin.html#signin">Sign in</a>
         </form>

@@ -45,8 +45,8 @@ body {
 /*JS INSTANSIERADE LÄNKAR*/
 .spel-thumb {
     padding: 5px;
-    width: 205px;
-    height: 205px;
+    //width: 205px;
+    //height: 205px;
     border-radius: 12px;
 }
 

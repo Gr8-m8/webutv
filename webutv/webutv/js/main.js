@@ -18,25 +18,28 @@ class MainEditor {
 
 	//SÄTTER SPELEN PÅ HEMSIDAN
 	DisplayGames() {
+		document.getElementById("main").innerHTML += this.AddSection("Search", "0px");
 		for (var i = 0; i < this.games.length; i++) {
 			this.games[i].initNum = i;
 			for (var t = 0; t < this.games[i].tags.length; t++) {
 				if (document.getElementById("t" + this.games[i].tags[t]) != undefined || document.getElementById(this.games[i].tags[t]) != null) {
-					document.getElementById("t" + this.games[i].tags[t]).lastElementChild.innerHTML += this.games[i].DisplayGame();
+					document.getElementById("t" + this.games[i].tags[t]).lastElementChild.lastElementChild.innerHTML += this.games[i].DisplayGame();
 				} else {
 					document.getElementById("main").innerHTML += this.AddSection(this.games[i].tags[t]);
-					document.getElementById("t" + this.games[i].tags[t]).lastElementChild.innerHTML += this.games[i].DisplayGame();
+					document.getElementById("t" + this.games[i].tags[t]).lastElementChild.lastElementChild.innerHTML += this.games[i].DisplayGame();
 				}
 			}
 		}
 	}
 
 	//LÄGGER TILL EN SECTION FÖR SPEL
-	AddSection(tag) {
+	AddSection(tag, display = "auto") {
 
-		this.AddSectionLink(tag);
+		if (display == "auto") {
+			this.AddSectionLink(tag);
+		}
 
-		return "<section id= 't" + tag + "'> " +
+		return "<section id= 't" + tag + "' style='height:" + display + "; overflow:hidden;'> " +
 					"<div class='container-fluid'>" +
 						"<h2>" + tag + "</h2>" +
 						"<div id='displayGames' class='row'>" +
@@ -148,6 +151,10 @@ function ScrollSection() {
 	}
 }
 
+function WaitFor(func, time) {
+	setTimeout(func, time);
+}
+
 //ANVÄNDS IS Scroll() FÖR ATT SCROLLA NEDÅT
 function ScrollToBottom() {
 	window.scrollTo(0, document.body.scrollHeight);
@@ -157,5 +164,26 @@ function ScrollToBottom() {
 function Scroll(from = ScrollToBottom, lenght = 1000) {
 	for (var i = 0; i < lenght; i++) {
 		setTimeout(ScrollToBottom, i);
+	}
+}
+
+//Search
+function Search() {
+	window.scrollTo(0, 0);
+	var input = document.getElementById("searchGame").value.toUpperCase();
+
+	if (input != "") {
+		document.getElementById("tSearch").style.height = "auto";
+		document.getElementById("tSearch").lastElementChild.lastElementChild.innerHTML = "";
+
+		console.log(me.games.length);
+
+		for (var i = 0; i < me.games.length; i++) {
+			if (me.games[i].name.toUpperCase().indexOf(input) > -1) {
+				document.getElementById("tSearch").lastElementChild.lastElementChild.innerHTML += me.games[i].DisplayGame();
+			}
+		}
+	} else {
+		document.getElementById("tSearch").style.height = "0px";
 	}
 }
