@@ -60,11 +60,15 @@
     </AppxManifest>
     <Content Include="contact.html" />
     <Content Include="images\agario.jpg" />
+    <Content Include="images\cookieclicker.png" />
+    <Content Include="images\diep.png" />
+    <Content Include="images\moomoo.png" />
     <Content Include="images\retrooutrun.jpg" />
     <Content Include="images\RickGame.png" />
+    <Content Include="images\slayone.png" />
     <Content Include="images\slitherio.jpg" />
     <Content Include="images\snakelogo.png" />
-    <Content Include="images\snakelogo_BIG.png" />
+    <Content Include="images\superhex.png" />
     <Content Include="images\supermario63.png" />
     <Content Include="index.html" />
     <Content Include="images\LockScreenLogo.scale-200.png" />
