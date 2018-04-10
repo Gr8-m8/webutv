@@ -28,6 +28,18 @@ body {
     height:50px;
 }
 
+.nav_item_link {
+    text-align: center;
+    overflow-x: hidden;
+    margin-bottom: 20px;
+}
+
+.navbar_link_list{
+    margin-right:20px;
+    margin-left:5px;
+    //color:
+}
+
 /*HUVUDDELARNAS EGENSKAPER*/
 
 .main {

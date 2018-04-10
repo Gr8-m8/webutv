@@ -53,7 +53,7 @@ class MainEditor {
 	//LÄGGER TILL EN NAVBAR LINK TILL SECTION
 	AddSectionLink(tag) {
 		document.getElementById("navbar-list").innerHTML +=
-			"<li class='nav-item col-sm-5'>" + "<a class='nav-link' href='#t" + tag + "' onclick='WaitFor(ScrollSection, 5)'>" + tag + "</a>" + "</li>";
+			"<li class='nav-item col-sm-2 nav_item_link'>" + "<a class='nav-link' href='#t" + tag + "' onclick='WaitFor(ScrollSection, 5)'>" + tag + "</a>" + "</li>";
 
 	}
 
@@ -171,6 +171,10 @@ function Scroll(from = ScrollToBottom, lenght = 1000) {
 	for (var i = 0; i < lenght; i++) {
 		setTimeout(ScrollToBottom, i);
 	}
+}
+
+function ScrollX() {
+
 }
 
 //Search
