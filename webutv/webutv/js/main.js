@@ -133,12 +133,12 @@ window.onload = function () {
 			[
 				//new GameThumb("", "", [""]),
 				new GameThumb("RickGame", "https://17mali.ssis.nu/RickGame/index.html", ["Featured", "Arcade"], "images/RickGame.png"),
-				new GameThumb("Slither.IO", "http://slither.io/", ["Arcade", "Grow Stronger"], "images/slitherio.jpg"),
-				new GameThumb("Agar.IO", "http://agar.io/", ["Arcade", "Grow Stronger"], "images/agario.jpg"),
+				new GameThumb("Slither.IO", "http://slither.io/", ["Arcade", "Grow"], "images/slitherio.jpg"),
+				new GameThumb("Agar.IO", "http://agar.io/", ["Arcade", "Grow"], "images/agario.jpg"),
 				new GameThumb("Super Mario 63", "https://www.newgrounds.com/portal/view/498969", ["Platformer"], "images/supermario63.png"),
 				new GameThumb("SuperHex.IO", "http://superhex.io/", ["Arcade"], "images/superhex.png"),
-				new GameThumb("Cookie Clicker", "http://orteil.dashnet.org/experiments/cookie/", ["Clicker", "Grow Stronger"], "images/cookieclicker.png"),
-				new GameThumb("MooMoo.IO", "http://moomoo.io/", ["Arcade", "Grow Stronger", "Survival"], "images/moomoo.png"),
+				new GameThumb("Cookie Clicker", "http://orteil.dashnet.org/experiments/cookie/", ["Clicker", "Grow"], "images/cookieclicker.png"),
+				new GameThumb("MooMoo.IO", "http://moomoo.io/", ["Arcade", "Grow", "Survival"], "images/moomoo.png"),
 				new GameThumb("Slay One", "https://slay.one/", ["Action", "Shooting"], "images/slayone.png"),
 				new GameThumb("Diep.IO", "http://diep.io/", ["Shooting", "Survival"], "images/diep.png")
 			]
@@ -152,8 +152,10 @@ window.onresize = function () {
 
 //JUSTERAR SÅ ATT NAVBAREN INTE ÖVERLAPPAR SPELSECTIONEN, EFTER ATT HA TRYCKT PÅ SPELSECTION LÄNK
 function ScrollSection() {
+	var getNavHeight = document.getElementById("NavigationBar").style.height;
+
 	if (window.scrollY <= document.body.scrollHeight - 457 - 100) {
-		window.scrollBy(0, -100);
+		window.scrollBy(0, -120);
 	}
 }
 
@@ -173,8 +175,10 @@ function Scroll(from = ScrollToBottom, lenght = 1000) {
 	}
 }
 
-function ScrollX() {
-
+function ScrollXY(lenght, x, y, id) {
+	for (var i = 0; i < lenght; i++) {
+		document.getElementById(id).scrollBy(x, y);
+	}
 }
 
 //Search

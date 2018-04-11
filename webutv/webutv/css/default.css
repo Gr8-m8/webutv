@@ -31,7 +31,7 @@ body {
 .nav_item_link {
     text-align: center;
     overflow-x: hidden;
-    margin-bottom: 20px;
+    //margin-bottom: 20px;
 }
 
 .navbar_link_list{
