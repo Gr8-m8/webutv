@@ -17,7 +17,7 @@
     <!--NAVIGATION BAR-->
     <nav id="navigationBar" class="navbar navbar-expand-lg fixed-top main-color-info mainContainerPadding" style="border-bottom: 1px solid darkred;">
         <!--BILD-->
-        <a class="navbar-brand" href="index.html"><img src="images/snakelogo_BIG.png" class="img-fluid ml-left navImg"  /></a>
+        <a class="navbar-brand col-md-1" href="index.html"><img src="images/snakelogo_BIG.png" class="img-fluid ml-left navImg"  /></a>
 
         <!--KNAPP FÖR ATT ÖPPNA/STÄNGA #navigation-bar-->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation-bar">
@@ -25,19 +25,21 @@
         </button>
         
         <!--DIV MED LISTA FÖR ALLA NAVIGATIONSLÄNKAR-->
-        <div class="collapse navbar-collapse navbar_link_list" id="navigation-bar" style="">
-            <ul id="navbar-list" class="navbar-nav ml-left" style="overflow-x:scroll; border-left: 1px solid darkred; border-right: 1px solid darkred;">
+        <div class="collapse navbar-collapse navbar_link_list col-md-8" id="navigation-bar" style="">
+            <button class="btn" onclick="ScrollXY(100, -1, 0, 'navbar-list')"><i class="fas fa-chevron-left"></i></button>
+            <ul id="navbar-list" class="navbar-nav ml-left" style="overflow-x:hidden; border-left: 1px solid darkred; border-right: 1px solid darkred;">
                 <li class="nav-item col-sm-2 nav_item_link"><a class="nav-link" href="#about">About Us</a></li>
                 <!--JS SKAPAR LÄNKAR HÄR [51]-->
             </ul>
+            <button class="btn" onclick="ScrollXY(100, 1, 0, 'navbar-list')"><i class="fas fa-chevron-right"></i></button>
         </div>
 
         <!--FORMULÄR FÖR ATT MAN SKA KUNNA SÖKA-->
-        <form class="form-inline my-right my-2 my-lg-0">
-            <input id="searchGame" onkeyup="Search()" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn my-2 my-sm-0" type="submit" onclick="Search()">Search</button>
+        <form class="form-inline my-right my-2 my-lg-0 col-md-3">
+            <input id="searchGame" onkeyup="Search()" class="form-control mr-sm-2 col-10 col-sm-11 col-md-7" type="search" placeholder="Search" aria-label="Search">
+            <!--<button class="btn my-2 my-sm-0" type="submit" onclick="Search()"><i class="fas fa-search"></i></button>-->
             <!--LÄNK FÖR SIGNIN-->
-            <a class="btn my-2 my-sm-0" href="signin.html#signin">Sign in</a>
+            <a class="btn my-2 my-sm-0 col-2 col-sm-1 col-md-2" href="signin.html#signin"><i class="fas fa-sign-in-alt"></i></a>
         </form>
     </nav>
 
