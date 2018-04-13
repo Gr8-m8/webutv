@@ -152,7 +152,7 @@ window.onresize = function () {
 
 //JUSTERAR SÅ ATT NAVBAREN INTE ÖVERLAPPAR SPELSECTIONEN, EFTER ATT HA TRYCKT PÅ SPELSECTION LÄNK
 function ScrollSection() {
-	var getNavHeight = document.getElementById("NavigationBar").style.height;
+	var getNavHeight = document.getElementById("navigationBar").style.height;
 
 	if (window.scrollY <= document.body.scrollHeight - 457 - 100) {
 		window.scrollBy(0, -120);
@@ -169,7 +169,7 @@ function ScrollToBottom() {
 }
 
 //SCROLLAR TILL BOTTEN AV SIDAN I 1 SEKUND
-function Scroll(from = ScrollToBottom, lenght = 1000) {
+function Scroll(func = ScrollToBottom, lenght = 1000) {
 	for (var i = 0; i < lenght; i++) {
 		setTimeout(ScrollToBottom, i);
 	}
@@ -177,7 +177,7 @@ function Scroll(from = ScrollToBottom, lenght = 1000) {
 
 function ScrollXY(lenght, x, y, id) {
 	for (var i = 0; i < lenght; i++) {
-		document.getElementById(id).scrollBy(x, y);
+		setTimeout(document.getElementById(id).scrollBy(x, y), i);
 	}
 }
 
