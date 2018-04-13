@@ -141,7 +141,7 @@ window.onload = function () {
 				new GameThumb("MooMoo.IO", "http://moomoo.io/", ["Arcade", "Grow", "Survival"], "images/moomoo.png"),
 				new GameThumb("Slay One", "https://slay.one/", ["Action", "Shooting"], "images/slayone.png"),
                 new GameThumb("Diep.IO", "http://diep.io/", ["Shooting", "Survival"], "images/diep.png"),
-                new GameThumb("GTA Somalia Pirate", "",["Shooting"],"images/lookatme.jpg")
+                new GameThumb("GTA Somalia Pirate", "",["Shooting", "Survival", "Action"],"images/lookatme.jpg")
 			]
 		);
 	}
