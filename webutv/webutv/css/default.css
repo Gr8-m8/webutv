@@ -11,7 +11,7 @@
 
 /*BODYNS EGENSKAPER*/
 body {
-    //background-color: rgba(100,0,100,1);
+    background-color: rgba(100,0,100,1);
     background: url("../images/space-invaders-btm3.png") no-repeat fixed 100%;
     background-size: cover;
     overflow-x: hidden;
