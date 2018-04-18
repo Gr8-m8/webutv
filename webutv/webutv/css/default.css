@@ -1,12 +1,19 @@
 ﻿/*RESPONSIV CSS */
 @media only screen and (max-width: 575px){
-    body {
-        text-align: center;
-            
-    }
-
     .main-offset-top{
         margin-top:5px;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    body {
+        text-align: center;
+    }
+
+    .navbar_link_list_scroll_Button {
+        height: 0px;
+        width: 0px;
+        padding:0px;
     }
 }
 
@@ -40,6 +47,9 @@ body {
     margin-right:20px;
     margin-left:5px;
     //color:
+}
+
+.navbar_link_list_scroll_Button{
 }
 
 /*HUVUDDELARNAS EGENSKAPER*/
