@@ -140,8 +140,7 @@ window.onload = function () {
 				new GameThumb("Cookie Clicker", "http://orteil.dashnet.org/experiments/cookie/", ["Clicker", "Grow"], "images/cookieclicker.png"),
 				new GameThumb("MooMoo.IO", "http://moomoo.io/", ["Arcade", "Grow", "Survival"], "images/moomoo.png"),
 				new GameThumb("Slay One", "https://slay.one/", ["Action", "Shooting"], "images/slayone.png"),
-                new GameThumb("Diep.IO", "http://diep.io/", ["Shooting", "Survival"], "images/diep.png"),
-                new GameThumb("GTA Somalia Pirate", "",["Shooting"],"images/lookatme.jpg")
+                new GameThumb("Diep.IO", "http://diep.io/", ["Shooting", "Survival"], "images/diep.png")
 			]
 		);
 	}
@@ -169,16 +168,17 @@ function ScrollToBottom() {
 	window.scrollTo(0, document.body.scrollHeight);
 }
 
-//SCROLLAR TILL BOTTEN AV SIDAN I 1 SEKUND
-function Scroll(func = ScrollToBottom, lenght = 1000) {
-	for (var i = 0; i < lenght; i++) {
-		setTimeout(ScrollToBottom, i);
-	}
+//SCROLLA NAVBARLISTA
+function ScrollNavXP() {
+	document.getElementById("navbar-list").scrollBy(1, 0);
+}function ScrollNavXN() {
+	document.getElementById("navbar-list").scrollBy(-1, 0);
 }
 
-function ScrollXY(lenght, x, y, id) {
+//FÖR ATT KUNNA SCROLLA
+function Scroll(func = ScrollToBottom, lenght = 1000) {
 	for (var i = 0; i < lenght; i++) {
-		setTimeout(document.getElementById(id).scrollBy(x, y), i);
+		setTimeout(func, i);
 	}
 }
 

@@ -2,6 +2,7 @@
 @media only screen and (max-width: 575px){
     body {
         text-align: center;
+            
     }
 
     .main-offset-top{
@@ -15,6 +16,7 @@ body {
     background: url("../images/space-invaders-btm3.png") no-repeat fixed 100%;
     background-size: cover;
     overflow-x: hidden;
+    //color: green;
 }
 
 
@@ -138,6 +140,7 @@ p {
     margin: 0 0 25px;
     font-size: 18px;
     line-height: 1.6em;
+    font-color: green;
 }
 
 a {
